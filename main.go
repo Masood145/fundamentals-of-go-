@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"fundamentals-of-go-/learning"
-)
+import "fundamentals-of-go-/learning"
 
 func main() {
 
@@ -58,10 +55,15 @@ func main() {
 
 	//learning.Rangeovertypes()
 
-	i := 1
+	/*i := 1
 	learning.Zeroval(i)
 	fmt.Println(i)
 	learning.Zeropoint(&i)
 	fmt.Println(i)
-	fmt.Println(&i)
+	fmt.Println(&i)*/
+
+	//	learning.Runesbytesstrings()
+
+	//learning.Struc()
+	learning.Result()
 }
