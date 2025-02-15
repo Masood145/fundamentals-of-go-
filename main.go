@@ -1,6 +1,9 @@
 package main
 
-import "fundamentals-of-go-/learning"
+import (
+	"fmt"
+	"fundamentals-of-go-/learning"
+)
 
 func main() {
 
@@ -65,5 +68,9 @@ func main() {
 	//	learning.Runesbytesstrings()
 
 	//learning.Struc()
-	learning.Result()
+	//learning.Result()
+	rectan := learning.Rectangle{Width: 6, Height: 7}
+	circ := learning.Circle{Radius: 5}
+	fmt.Println(rectan)
+	fmt.Println(circ)
 }
