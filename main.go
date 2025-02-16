@@ -69,8 +69,40 @@ func main() {
 
 	//learning.Struc()
 	//learning.Result()
+	/* CODE FOR INTERFACES
 	rectan := learning.Rectangle{Width: 6, Height: 7}
 	circ := learning.Circle{Radius: 5}
-	fmt.Println(rectan)
-	fmt.Println(circ)
+	shapes := []learning.Shape{rectan, circ}
+
+	for _, Shape := range shapes {
+		// by creating a slice we can call it like this
+		fmt.Println(Shape.Area())
+		// by craeting a func in interface class we can call like this
+		fmt.Println(learning.Calculate(Shape))
+	}
+	Periofrectan := learning.Rectangle{Width: 6, Height: 7}
+	periofcirc := learning.Circle{Radius: 5}
+	shapes1 := []learning.Shape2{Periofrectan, periofcirc}
+
+	for _, Shape2 := range shapes1 {
+		// by creating a slice we can call it like this
+
+		fmt.Println((Shape2.Perim()))
+		// by craeting a func in interface class we can call like this
+
+		fmt.Println(learning.Calculate1(Shape2))
+	}*/
+	Analyzer := learning.PacketAnalyzer{}
+
+	for i := 0; i < 10; i++ {
+		packet := learning.PacketGenerator()
+		Status := Analyzer.Analyze(packet)
+		fmt.Printf("Packet #%d, Protocol %s, SourceIP %s, DestinationIP %s, Size %d bytes, Status %s\n  ",
+			packet.ID, packet.Protocol, packet.SourceIP, packet.Destinationip, packet.Size, Status)
+	}
+
+	fmt.Println("Total Packets\n", Analyzer.TotalPackets)
+	fmt.Println("Accepted Packets\n", Analyzer.AcceptedPackets)
+	fmt.Println("Rejected Packets\n", Analyzer.RejectedPackets)
+	fmt.Println("Suspicious Packets\n", Analyzer.Suspiciouspackets)
 }
