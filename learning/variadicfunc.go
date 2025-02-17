@@ -8,7 +8,6 @@ func Varfunc(numbers ...int) {
 
 	for _, sum := range numbers {
 		total += sum
-
 	}
 	fmt.Println(total)
 }

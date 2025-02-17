@@ -69,6 +69,7 @@ func main() {
 
 	//learning.Struc()
 	//learning.Result()
+
 	/* CODE FOR INTERFACES
 	rectan := learning.Rectangle{Width: 6, Height: 7}
 	circ := learning.Circle{Radius: 5}
@@ -92,6 +93,8 @@ func main() {
 
 		fmt.Println(learning.Calculate1(Shape2))
 	}*/
+
+	/* Emuns
 	Analyzer := learning.PacketAnalyzer{}
 
 	for i := 0; i < 10; i++ {
@@ -104,5 +107,38 @@ func main() {
 	fmt.Println("Total Packets\n", Analyzer.TotalPackets)
 	fmt.Println("Accepted Packets\n", Analyzer.AcceptedPackets)
 	fmt.Println("Rejected Packets\n", Analyzer.RejectedPackets)
-	fmt.Println("Suspicious Packets\n", Analyzer.Suspiciouspackets)
+	fmt.Println("Suspicious Packets\n", Analyzer.Suspiciouspackets)*/
+	/*
+		player := learning.Newplayer()
+		player.Move(6.8, 9.9)
+		fmt.Println(player.Postion)
+		player.Teleport(6.8, 9.9)
+		fmt.Println(player.Postion)
+		player.MoveSpecial(6.8, 9.9)
+		fmt.Println(player.Postion)
+
+		zombie := learning.NewEnemy()
+		zombie.Move(9, 7)
+		fmt.Println(zombie.Postion)
+		zombie.Teleport(9, 7)
+		fmt.Println(zombie.Postion)
+		zombie.MoveSpecial(9, 7)
+		fmt.Println(zombie.Postion) */
+	//Generics
+	//simple FUnctio
+
+	fmt.Println(learning.HAs([]string{"a", "b", "c"}, "c"))
+	// now we use generic function when we call it their we specify the type of list
+	fmt.Println(learning.HAS([]string{"a", "b", "c"}, "c"))
+	fmt.Println(learning.HAS([]string{"a", "b", "c"}, "d"))
+	fmt.Println(learning.HAS([]int{1, 2, 3}, 3))
+	fmt.Println(learning.HAS([]int{1, 2, 3}, 4))
+
+	learning.Typeperimeters(2, 2, 2, 3)
+	learning.Typeperimeters("2", "2", 2, 3)
+	learning.Typeperimeters(2, 2, "b", 3)
+	// method call can be use for strings
+	intcheck := learning.Sets(1, 2, 3, 4)
+	fmt.Println(intcheck.Check(7))
+
 }
